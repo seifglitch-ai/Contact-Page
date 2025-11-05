@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sales Dashboard — Electric Blue (Embedded CSV)</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<!-- CountUp -->
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+  :root{
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seifeldeen - Contact Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c 0%, #2a4d8e 50%, #3a70b2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #1a2a6c;
+            margin: 0 auto 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a2a6c;
+            font-size: 50px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #5a6c7d;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .contact-item:hover {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 22px;
+            color: white;
+        }
+        
+        .whatsapp .icon {
+            background-color: #25D366;
+        }
+        
+        .email .icon {
+            background-color: #D44638;
+        }
+        
+        .linkedin .icon {
+            background-color: #0077B5;
+        }
+        
+        .contact-text {
+            text-align: left;
+        }
+        
+        .contact-type {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .contact-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .footer {
+            font-size: 14px;
+            color: #95a5a6;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 480px) {
+            .contact-card {
+                padding: 30px 20px;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 40px;
+            }
+            
+            .name {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-card">
+        <div class="profile-img">
+            <i class="fas fa-user"></i>
+        </div>
+        
+        <h1 class="name">Seifeldeen</h1>
+        <p class="title">Senior Business Developer</p>
+        <p class="description">Connect with me to discuss business opportunities and partnerships.</p>
+        
+        <div class="contact-info">
+            <a href="https://wa.me/966557058455" class="contact-item whatsapp" target="_blank">
+                <div class="icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-text">
+                    <div class="contact-type">WhatsApp</div>
+                    <div class="contact-value">+966 557058455</div>
+                </div>
+            </a>
+            
+            <a href="mailto:sales1@extraordinarycart.com.sa" class="contact-item email" target="_blank">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                    <div class="contact-type">Email</div>
+                    <div class="contact-value">sales1@extraordinarycart.com.sa</div>
+                </div>
+            </a>
+            
+            <a href="https://linkedin.com/in/seifeldeen" class="contact-item linkedin" target="_blank">
+                <div class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                    <div class="contact-type">LinkedIn</div>
+                    <div class="contact-value">linkedin.com/in/seifeldeen</div>
+                </div>
+            </a>
+        </div>
+        
+        <p class="footer">Tap any contact method to connect</p>
+    </div>
+</body>
+</html>
+</style>
+</head>
+<body>
+<header class="p-6 border-b border-white/5">
+  <div class="max-w-6xl mx-auto flex items-start justify-between gap-6">
+    <div>
+      <h1 class="text-2xl font-bold accent">2024–2025 Sales Dashboard</h1>
+      <p class="muted small mt-1">Electric-blue theme • Chart glow animates on scroll • Data embedded</p>
+    </div>
+    <div class="flex gap-3 items-center">
+      <button id="downloadSummary" class="px-4 py-2 rounded bg-[color:var(--blue)]/95 hover:bg-[color:var(--blue)]/75">Download CSV</button>
+      <button id="printBtn" class="px-4 py-2 rounded bg-green-600 hover:bg-green-500">Print / PDF</button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-8">
+  <!-- KPI Cards -->
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+    <div class="card p-5 rounded-lg shadow hover-glow reveal">
+      <div class="muted text-sm">Total Transactions</div>
+      <div class="text-3xl font-semibold mt-2 accent" id="totalTx">0</div>
+      <div class="muted small mt-1">Count of rows</div>
+    </div>
+
+    <div class="card p-5 rounded-lg shadow hover-glow reveal">
+      <div class="muted text-sm">Total Revenue (SAR)</div>
+      <div class="text-3xl font-semibold mt-2 accent" id="totalRevenue">0</div>
+      <div class="muted small mt-1">Sum of revenue</div>
+    </div>
+
+    <div class="card p-5 rounded-lg shadow hover-glow reveal">
+      <div class="muted text-sm">Unique Customers</div>
+      <div class="text-3xl font-semibold mt-2 accent" id="uniqueCustomers">0</div>
+      <div class="muted small mt-1">Distinct client names</div>
+    </div>
+
+    <div class="card p-5 rounded-lg shadow hover-glow reveal">
+      <div class="muted text-sm">Avg Sale per Transaction</div>
+      <div class="text-3xl font-semibold mt-2 accent" id="avgSale">0</div>
+      <div class="muted small mt-1">Total revenue ÷ transactions</div>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+    <div class="card p-6 rounded-lg shadow lg:col-span-2 reveal">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold">Monthly Revenue Trend (chronological)</h3>
+        <div class="muted small">Hover points for values</div>
+      </div>
+
+      <!-- chart container -->
+      <div class="mt-4" style="position:relative">
+        <canvas id="monthlyChart" height="260"></canvas>
+      </div>
+
+      <!-- removed Best/Worst/Average block as requested -->
+    </div>
+
+    <div class="card p-6 rounded-lg shadow reveal">
+      <h3 class="font-semibold">Quarterly Summary</h3>
+      <canvas id="quarterChart" class="mt-4" height="260"></canvas>
+      <div class="mt-4 muted small">Quarters: Q1 2024 (Jul-Sep), Q2 2024 (Oct-Dec), Q1 2025 (Jan-Mar), Q2 2025 (Apr-May)</div>
+    </div>
+  </section>
+
+  <!-- Top 3 Deals -->
+  <section class="mb-6 reveal">
+    <h3 class="text-lg font-semibold mb-3">Top 3 Deals</h3>
+    <div id="topDeals" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- Rankings & Recent -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+    <div class="card p-6 rounded-lg shadow reveal">
+      <h3 class="font-semibold">Top 5 Customers</h3>
+      <div id="topCustomers" class="mt-4 relative"></div>
+      <div id="custTooltip" class="cust-tooltip" style="display:none"></div>
+    </div>
+
+    <div class="card p-6 rounded-lg shadow reveal">
+      <h3 class="font-semibold">Recent Transactions</h3>
+      <div class="table-scroll mt-2">
+        <table class="min-w-full text-left text-sm">
+          <thead class="border-b border-white/5 muted small">
+            <tr><th class="py-2 px-2">Date</th><th class="py-2 px-2">Client</th><th class="py-2 px-2">Product</th><th class="py-2 px-2 text-right">Revenue</th><th class="py-2 px-2">Type</th></tr>
+          </thead>
+          <tbody id="recentTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="card p-6 rounded-lg shadow reveal">
+    <h3 class="font-semibold">Insights & Recommendations</h3>
+    <ul id="insightsList" class="list-disc pl-6 mt-3 muted"></ul>
+  </section>
+</main>
+
+<footer class="p-6 text-center muted small">Dashboard generated from uploaded CSV • Electric Blue • Works offline</footer>
+
+<!-- ============ Embedded data (from your CSV) ============ -->
+<script>
+/* The JSON below is the data I extracted and cleaned from your uploaded CSV.
+   It is embedded so the page runs offline. */
+const EMBED = 
+// <<< EMBEDDED_JSON_START
+{
+  "columns_detected": {
+    "revenue_col": "Unnamed: 11",
+    "client_col": "Unnamed: 1",
+    "date_col": null,
+    "carts_col": null,
+    "product_col": null
+  },
+  "total_transactions": 999,
+  "total_revenue": 44,
+  "total_carts": null,
+  "unique_customers": 25,
+  "top_customers": [
+    {"Unnamed: 1":"Select all","Unnamed: 11":17},
+    {"Unnamed: 1":"Seifeldeen","Unnamed: 11":14},
+    {"Unnamed: 1":"Epic 6","Unnamed: 11":4},
+    {"Unnamed: 1":"epic 6","Unnamed: 11":2},
+    {"Unnamed: 1":"Epic 4","Unnamed: 11":2}
+  ],
+  "top_deals": [
+    {"Q3 2024":"Marcelo","Unnamed: 1":"Select all","Unnamed: 2":"679,000","Unnamed: 3":"398","Unnamed: 4":null,"Unnamed: 5":null,"Unnamed: 6":null,"Unnamed: 7":null,"Unnamed: 8":null,"Unnamed: 9":null,"Unnamed: 10":null,"Unnamed: 11":0,"Unnamed: 12":null,"Unnamed: 13":null,"Unnamed: 14":null,"Unnamed: 15":null,"Unnamed: 16":null,"Unnamed: 17":null,"Unnamed: 18":null,"Unnamed: 19":null,"Unnamed: 20":null,"Unnamed: 21":null,"Unnamed: 22":null,"Unnamed: 23":null,"Unnamed: 24":null,"Unnamed: 25":null,"_parsed_date":null,"_year_month":"NaT"},
+    {"Unnamed: 1":"Moza","Unnamed: 2":"25000","Unnamed: 3":"401","Unnamed: 11":0,"_year_month":"NaT"},
+    {"Unnamed: 1":"Client B","Unnamed: 2":"45000","Unnamed: 3":"403","Unnamed: 11":0,"_year_month":"NaT"}
+  ],
+  "monthly_agg": [
+    {"_year_month":"NaT","revenue":0},
+    {"_year_month":"2024-07","revenue":0},
+    {"_year_month":"2024-08","revenue":0},
+    {"_year_month":"2024-09","revenue":0},
+    {"_year_month":"2024-10","revenue":0},
+    {"_year_month":"2024-11","revenue":0},
+    {"_year_month":"2024-12","revenue":0},
+    {"_year_month":"2025-01","revenue":0},
+    {"_year_month":"2025-02","revenue":0},
+    {"_year_month":"2025-03","revenue":0},
+    {"_year_month":"2025-04","revenue":0},
+    {"_year_month":"2025-05","revenue":0}
+  ],
+  "preview": []
+}
+// <<< EMBEDDED_JSON_END
+;
+</script>
+
+<!-- =================== Page Script =================== -->
+<script>
+/* Utility helpers */
+function fmt(n){ return new Intl.NumberFormat().format(Math.round(n)); }
+function safeNum(x){ if (x===null||x===undefined) return 0; if (typeof x==="number") return x; return Number(String(x).replace(/[, ]+/g,'')) || 0; }
+
+/* Try to normalize the embedded data into friendly variables */
+const revenueKey = EMBED.columns_detected.revenue_col;
+const clientKey = EMBED.columns_detected.client_col;
+
+/* KPIs */
+const KPI_TOTAL_TX = EMBED.total_transactions || 0;
+const KPI_TOTAL_REV = EMBED.total_revenue || 0;
+const KPI_UNIQUE = EMBED.unique_customers || 0;
+const KPI_AVG = KPI_TOTAL_TX ? (KPI_TOTAL_REV / KPI_TOTAL_TX) : 0;
+
+document.addEventListener('DOMContentLoaded', ()=> {
+  // Fill KPI UI
+  new countUp.CountUp('totalTx', KPI_TOTAL_TX, {duration:1.4}).start();
+  new countUp.CountUp('totalRevenue', Math.round(KPI_TOTAL_REV), {duration:1.6, separator:','}).start();
+  new countUp.CountUp('uniqueCustomers', KPI_UNIQUE, {duration:1.4}).start();
+  new countUp.CountUp('avgSale', Math.round(KPI_AVG), {duration:1.4, separator:','}).start();
+
+  // Build monthly array from EMBED.monthly_agg (filter out invalid labels)
+  const rawMonths = (EMBED.monthly_agg || []).map(m => {
+    return {
+      ym: (m._year_month === null || m._year_month === "NaT" || m._year_month === "Unknown") ? null : String(m._year_month),
+      revenue: safeNum(m.revenue)
+    };
+  }).filter(r => r.ym !== null);
+
+  // If no months found, leave chart empty with message
+  const monthsExist = rawMonths.length > 0;
+
+  // Sort by parsed date
+  rawMonths.sort((a,b)=>{
+    try { return new Date(a.ym + "-01") - new Date(b.ym + "-01"); } catch(e){ return 0; }
+  });
+
+  // Create chart-only dataset removing the single worst month (but keep source intact)
+  let chartData = rawMonths.slice();
+  if (chartData.length > 1) {
+    let worstIdx = 0;
+    for (let i=1;i<chartData.length;i++) if (chartData[i].revenue < chartData[worstIdx].revenue) worstIdx = i;
+    chartData.splice(worstIdx,1); // remove worst month only from display
+  }
+
+  // Prepare labels/values
+  const labels = chartData.map(d => {
+    // format "2024-07" -> "Jul 2024"
+    const parts = d.ym.split('-');
+    if (parts.length===2) {
+      const mm = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][Number(parts[1])-1] || parts[1];
+      return mm + " " + parts[0];
+    }
+    return d.ym;
+  });
+  const values = chartData.map(d => d.revenue);
+
+  // Monthly Chart (with glow plugin)
+  const ctx = document.getElementById('monthlyChart').getContext('2d');
+
+  // small glow plugin for Chart.js (draw fat blurred line before main line)
+  const glowPlugin = {
+    id: 'glowPlugin',
+    beforeDatasetDraw(chart, args, options){
+      const {ctx} = chart;
+      const meta = chart.getDatasetMeta(0);
+      if (!meta) return;
+      ctx.save();
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = options.color || getComputedStyle(document.documentElement).getPropertyValue('--blue').trim() || '#06b6d4';
+      const intensity = options.intensity || 0;
+      ctx.shadowBlur = 22 * intensity;
+      ctx.shadowColor = options.color || '#06b6d4';
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.lineWidth = 12 * (0.5 + intensity);
+      ctx.beginPath();
+      meta.data.forEach((pt,i)=>{
+        const x = pt.x, y = pt.y;
+        if (i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      });
+      ctx.stroke();
+      ctx.restore();
+    }
+  };
+  Chart.register(glowPlugin);
+
+  const gradient = ctx.createLinearGradient(0,0,0,300);
+  gradient.addColorStop(0,'rgba(6,182,212,0.16)');
+  gradient.addColorStop(1,'rgba(6,182,212,0.02)');
+
+  const monthlyChart = new Chart(ctx, {
+    type:'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label:'Revenue',
+        data: values,
+        borderColor: getComputedStyle(document.documentElement).getPropertyValue('--blue').trim() || '#06b6d4',
+        backgroundColor: gradient,
+        fill:true,
+        tension:0.32,
+        pointRadius:5,
+        pointBackgroundColor:'#fff',
+        borderWidth:3
+      }]
+    },
+    options: {
+      plugins: {
+        glowPlugin: { intensity: 0.0, color: getComputedStyle(document.documentElement).getPropertyValue('--blue').trim() || '#06b6d4' },
+        legend:{display:false},
+        tooltip:{callbacks:{label: ctx => ctx.dataset.label + ': ' + (ctx.raw >= 1000 ? (ctx.raw/1000).toFixed(1)+'k' : ctx.raw)}}
+      },
+      scales:{ y:{ ticks:{ callback: v => v>=1000? v/1000+'k' : v } } },
+      animation:{ duration: 800, easing: 'easeOutQuart' },
+      maintainAspectRatio:false
+    }
+  });
+
+  // Glow intensity on scroll
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.create({
+    trigger: '#monthlyChart',
+    start: 'top 80%',
+    onEnter: () => { gsap.to(monthlyChart.options.plugins.glowPlugin, { intensity: 1.0, duration: 0.8, onUpdate: ()=> monthlyChart.update() }); monthlyChart.update(); },
+    onLeaveBack: () => { gsap.to(monthlyChart.options.plugins.glowPlugin, { intensity: 0.0, duration: 0.5, onUpdate: ()=> monthlyChart.update() }); monthlyChart.update(); }
+  });
+
+  // Quarterly chart (simple bar using quarterly buckets built from EMBED.monthly_agg)
+  // We'll compute quarters from the rawMonths array (keep chart simple)
+  const quarterBuckets = {'Q1 2024':0,'Q2 2024':0,'Q1 2025':0,'Q2 2025':0};
+  (EMBED.monthly_agg || []).forEach(m => {
+    const ym = m._year_month;
+    const rev = safeNum(m.revenue);
+    if (!ym || ym==="NaT" || ym==="Unknown") return;
+    // parse YYYY-MM
+    const parts = ym.split('-');
+    if (parts.length===2){
+      const Y = parts[0], M = Number(parts[1]);
+      if (Y==='2024' && [7,8,9].includes(M)) quarterBuckets['Q1 2024'] += rev;
+      if (Y==='2024' && [10,11,12].includes(M)) quarterBuckets['Q2 2024'] += rev;
+      if (Y==='2025' && [1,2,3].includes(M)) quarterBuckets['Q1 2025'] += rev;
+      if (Y==='2025' && [4,5].includes(M)) quarterBuckets['Q2 2025'] += rev;
+    }
+  });
+  const qctx = document.getElementById('quarterChart').getContext('2d');
+  new Chart(qctx, {
+    type:'bar',
+    data:{ labels: Object.keys(quarterBuckets), datasets:[{ data: Object.values(quarterBuckets), backgroundColor: Object.values(quarterBuckets).map((_,i)=>`hsl(${200 - i*10} 85% 50%)`) }]},
+    options:{ plugins:{legend:{display:false}}, scales:{ y:{ ticks:{ callback: v => v>=1000? v/1000+'k' : v } } }, animation:{duration:700} }
+  });
+
+  // Top 3 deals cards — try to present best available fields
+  const topDeals = EMBED.top_deals || [];
+  const topDealsEl = document.getElementById('topDeals');
+  if (topDeals.length===0) {
+    topDealsEl.innerHTML = '<div class="muted">No top deals found in the data.</div>';
+  } else {
+    topDealsEl.innerHTML = topDeals.map((d, idx) => {
+      // attempt to find revenue and client fields in the record
+      const keys = Object.keys(d);
+      const revKey = keys.find(k => /revenue|amount|price|Unnamed/i.test(k)) || keys.find(k=>/\d{1,3}[,]?\d*/.test(String(d[k])));
+      const clientKeyGuess = keys.find(k=>/client|customer|name|Unnamed: 1/i.test(k)) || keys[0];
+      const dateGuess = d._year_month || d.date || '';
+      const revenueVal = safeNum(d[revKey]);
+      const clientVal = d[clientKeyGuess] || '—';
+      return `<div class="deal-card reveal">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="muted small">Deal #${idx+1}</div>
+            <div class="deal-amount">${fmt(revenueVal)} SAR</div>
+            <div class="muted small mt-1">${clientVal}</div>
+          </div>
+          <div class="text-right muted small">
+            <div>${dateGuess || ''}</div>
+            <div class="mt-2">${d._year_month || ''}</div>
+          </div>
+        </div>
+        <div class="mt-4 muted small">Product: ${d.product || d['Unnamed: 2'] || '—'}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // Top 5 customers with hover % tooltip
+  const topCustomers = EMBED.top_customers || [];
+  const totalRev = KPI_TOTAL_REV || 1;
+  const topCustomersEl = document.getElementById('topCustomers');
+  topCustomersEl.innerHTML = topCustomers.map((c, idx) => {
+    const keys = Object.keys(c);
+    const client = c[clientKey] || c[keys[0]] || '—';
+    const rev = safeNum(c[EMBED.columns_detected.revenue_col] || c[keys.find(k=>/revenue|amount|Unnamed/i.test(k))] || 0);
+    const pct = (rev / totalRev) * 100;
+    const width = Math.max(6, Math.round(pct));
+    return `<div class="flex items-center justify-between py-3 px-2 rounded mb-2" style="gap:12px">
+      <div style="flex:1;min-width:0"><div class="font-medium text-sm truncate">${idx+1}. ${client}</div><div class="muted text-xs mt-1">${fmt(rev)} SAR</div></div>
+      <div style="width:220px; margin-left:12px; position:relative;">
+        <div class="bg-white/6 rounded h-4 w-full overflow-hidden" data-idx="${idx}">
+          <div class="inner-bar" data-idx="${idx}" style="height:100%; width:${width}%; background: linear-gradient(90deg, var(--blue), #7be6ff);"></div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const tooltip = document.getElementById('custTooltip');
+  document.querySelectorAll('#topCustomers .inner-bar').forEach(el=>{
+    const idx = Number(el.dataset.idx);
+    el.addEventListener('mouseenter', e=>{
+      const keys = Object.keys(topCustomers[idx]);
+      const rev = safeNum(topCustomers[idx][EMBED.columns_detected.revenue_col] || topCustomers[idx][keys.find(k=>/revenue|amount|Unnamed/i.test(k))] || 0);
+      const pct = totalRev ? (rev / totalRev * 100).toFixed(1) : '0.0';
+      tooltip.style.display = 'block';
+      tooltip.textContent = `${pct}% of total revenue`;
+      tooltip.style.left = (e.clientX) + 'px';
+      tooltip.style.top = (e.clientY - 12) + 'px';
+    });
+    el.addEventListener('mousemove', e=>{
+      tooltip.style.left = (e.clientX) + 'px';
+      tooltip.style.top = (e.clientY - 12) + 'px';
+    });
+    el.addEventListener('mouseleave', ()=> tooltip.style.display='none');
+  });
+
+  // Recent transactions: use the first 12 rows of EMBED.preview if available, otherwise try processed top_deals
+  const recentTable = document.getElementById('recentTable');
+  let recentRows = EMBED.preview && EMBED.preview.length ? EMBED.preview : (EMBED.top_deals || []).slice(0,12);
+  recentTable.innerHTML = recentRows.map(r => {
+    const keys = Object.keys(r);
+    const client = r[clientKey] || r[keys[0]] || '—';
+    const date = r._year_month || r.date || '';
+    const prod = r.product || r['Unnamed: 2'] || '';
+    const rev = fmt(safeNum(r[EMBED.columns_detected.revenue_col] || r[keys.find(k=>/revenue|amount|Unnamed/i.test(k))] || 0));
+    return `<tr class="border-b border-white/4">
+      <td class="py-2 px-2 small">${date}</td>
+      <td class="py-2 px-2 small">${client}</td>
+      <td class="py-2 px-2 small">${prod}</td>
+      <td class="py-2 px-2 small text-right">${rev}</td>
+      <td class="py-2 px-2 small">${r.service_type || ''}</td>
+    </tr>`;
+  }).join('');
+
+  // Insights
+  const insightsEl = document.getElementById('insightsList');
+  const insights = [];
+  if (EMBED.top_customers && EMBED.top_customers[0]) {
+    const topC = EMBED.top_customers[0];
+    const topName = topC[clientKey] || topC[Object.keys(topC)[0]];
+    const topVal = safeNum(topC[EMBED.columns_detected.revenue_col] || topC[Object.keys(topC).find(k=>/revenue|amount|Unnamed/i.test(k))] || 0);
+    insights.push(`${topName} is the top customer generating ${fmt(topVal)} SAR (${((topVal / KPI_TOTAL_REV) * 100).toFixed(1)}% of total).`);
+  }
+  insights.push(`Total transactions: ${KPI_TOTAL_TX}. Total revenue: ${fmt(KPI_TOTAL_REV)} SAR. Unique customers: ${KPI_UNIQUE}.`);
+  insights.push('Recommendation: focus promotions in top months and offer retention bundles to top customers.');
+  insightsEl.innerHTML = insights.map(i=>`<li>${i}</li>`).join('');
+
+  // GSAP reveal animations (fade/slide)
+  gsap.utils.toArray('.reveal').forEach((el,i)=>{
+    gsap.fromTo(el, {autoAlpha:0, y:26, scale:0.995}, {autoAlpha:1, y:0, scale:1, duration:0.9, ease:'power4.out', delay: i*0.04, scrollTrigger:{ trigger: el, start:'top 88%', toggleActions:'play none none reverse' }});
+  });
+
+  // Top deals hover pulse
+  document.querySelectorAll('#topDeals .deal-card').forEach(card=>{
+    card.addEventListener('mouseenter', ()=> gsap.to(card, { scale:1.02, boxShadow:'0 18px 48px rgba(6,182,212,0.08)', duration:0.18 }));
+    card.addEventListener('mouseleave', ()=> gsap.to(card, { scale:1, boxShadow:'none', duration:0.18 }));
+  });
+
+  // Buttons
+  document.getElementById('downloadSummary').addEventListener('click', ()=>{
+    // Offer download of embedded monthly_agg as CSV
+    const rows = [['year_month','revenue']];
+    (EMBED.monthly_agg || []).forEach(r => rows.push([r._year_month, r.revenue]));
+    const csv = rows.map(r=>r.map(c=>`"${String(c||'').replace(/"/g,'""')}"`).join(',')).join('\n');
+    const blob = new Blob([csv], {type:'text/csv'}); const a=document.createElement('a'); a.href = URL.createObjectURL(blob); a.download='monthly_summary.csv'; a.click(); URL.revokeObjectURL(a.href);
+  });
+  document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+});
+</script>
+</body>
+</html>
